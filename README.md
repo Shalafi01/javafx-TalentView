@@ -1,160 +1,74 @@
+# Seasonal Worker Management System
 
-# TalentView
+This project implements a system for managing and searching seasonal workers, built with JavaFX.
 
-TalentView is a JavaFX-based desktop application designed to manage and visualize talent profiles. It leverages object-oriented principles and JavaFX's capabilities to provide a user-friendly interface for talent management.
+## Table of Contents
+
+* [Features](#features)
+* [System Architecture](#system-architecture)
+* [Development Process](#development-process)
+* [Input Validation](#input-validation)
+* [Testing](#testing)
+* [Getting Started](#getting-started)
 
 ## Features
 
-- **Profile Management**: Add, edit, and delete talent profiles.
-- **Data Visualization**: View talent data through various charts and graphs.
-- **Search & Filter**: Easily search and filter talent profiles based on different criteria.
+The application provides the following key functionalities:
 
-## Technologies Used
+* **Worker Search**: Perform complex searches for seasonal workers based on user-defined parameters such as name, surname, spoken languages, availability periods, roles performed, place of residence, and driving license/car availability[cite: 5, 38]. Users can choose between AND or OR search logic[cite: 39].
+* **Worker Details View**: Access detailed information for each worker, including personal data, past work experiences, and emergency contacts[cite: 10, 11].
+* **Data Modification**: Modify existing worker records, including personal details, work experiences, and emergency contacts[cite: 12, 17].
+* **New Worker Registration**: Add new workers to the system, including their personal data and at least one emergency contact[cite: 29, 30].
+* **Work/Contact Management**: Add or delete work experiences and emergency contacts for selected workers[cite: 18, 24, 25, 27].
 
-- **JavaFX**: For building the GUI.
-- **FXML**: For defining the UI structure.
-- **CSS**: For styling the application.
-- **Java 11+**: For the backend logic.
+## System Architecture
 
-## Architecture Overview
+The system is designed following the **Model-View-Controller (MVC)** architectural pattern, separating the application into three distinct packages:
 
-TalentView follows the **Model-View-Controller (MVC)** design pattern:
+* **Model**: Manages all data and business logic. It was developed first to ensure robust data handling before implementing the graphical interface[cite: 57, 58, 63].
+* **View**: Handles the graphical representation of the Model, implemented using JavaFX FXML files for static elements and dynamically generated content for data-dependent displays[cite: 66, 67].
+* **Controller**: Defines the system's behavior based on user input, including handling user actions and dynamic UI updates[cite: 68, 69, 70].
 
-- **Model**: Represents the data and business logic.
-- **View**: The FXML files define the UI components.
-- **Controller**: Java classes that handle user interactions and update the model and view accordingly.
+In addition to MVC, the **Data Access Object (DAO)** pattern is implemented within the Model package[cite: 61]. This pattern abstracts data access operations, separating them from higher-level functionalities and hiding database complexity behind the `databaseDAO` interface[cite: 62].
 
-## Key Design Patterns and Methods
+The `databaseDAOimpl` class handles data import from an external JSON file (used for testing purposes)[cite: 79, 80, 81].
 
-### 1. Singleton Pattern
+## Development Process
 
-The application utilizes the Singleton pattern to ensure that certain classes, such as the main application class, have only one instance throughout the application's lifecycle.
+An agile and incremental development process was used, with an iterative four-phase cycle for each new feature:
 
-```java
-public class ApplicationManager {
-    private static ApplicationManager instance;
+1.  **Design**: Producing documentation, flowcharts, and criticality lists for new functionalities[cite: 49].
+2.  **Implementation**: Defining functions according to design specifications[cite: 51].
+3.  **Testing and Validation**: Verifying robustness and functionality, including edge cases[cite: 52, 53].
+4.  **Refactoring**: Improving code readability for future modifications[cite: 54].
 
-    private ApplicationManager() {
-        // private constructor
-    }
+This incremental approach allowed for function-by-function testing and a runnable program at the end of each cycle[cite: 55].
 
-    public static ApplicationManager getInstance() {
-        if (instance == null) {
-            instance = new ApplicationManager();
-        }
-        return instance;
-    }
-}
-````
+## Input Validation
 
-### 2. Factory Method Pattern
+Comprehensive input validation is implemented to ensure data integrity and user experience. Checks include:
 
-To create different types of talent profiles, a Factory Method pattern is employed, allowing for the creation of objects without specifying the exact class of object that will be created.
+* **Mandatory Fields**: Ensuring required fields are not left empty[cite: 113].
+* **Email and Phone Number Validity**: Verifying correct formats using the `checkPattern()` function in the `persona` class[cite: 114, 115].
+* **Generic Dates**: Validating dates are in `dd/MM/yyyy` format[cite: 116].
+* **Birth Dates**: Ensuring birth dates are not before 01/01/1900 or after the current date[cite: 118].
+* **Availability Periods**: Validating date formats, start/end dates, and preventing future end dates beyond 01/01/2100. Duplicate periods are ignored[cite: 119].
+* **Predefined Value Sets**: Validating "automunito" (car owner) and "patente" (driving license) fields against predefined values (e.g., "Si", "No" for car owner; specific license categories for driving license)[cite: 120, 121].
+* **Duplicate Values**: Removing duplicate entries for spoken languages and availability zones[cite: 122].
+* **Valid Remuneration**: Checking if the remuneration field for a job is a valid number[cite: 123].
+* **Work Period**: Ensuring past work experiences fall within the last 5 years and do not have future end dates[cite: 123].
 
-```java
-public abstract class TalentProfile {
-    public abstract void displayProfile();
-}
+Errors are notified to the user[cite: 15, 22, 34, 42].
 
-public class DeveloperProfile extends TalentProfile {
-    @Override
-    public void displayProfile() {
-        // display developer profile
-    }
-}
+## Testing
 
-public class DesignerProfile extends TalentProfile {
-    @Override
-    public void displayProfile() {
-        // display designer profile
-    }
-}
+The following validation activities were performed:
 
-public class TalentProfileFactory {
-    public TalentProfile createProfile(String type) {
-        if (type.equals("Developer")) {
-            return new DeveloperProfile();
-        } else if (type.equals("Designer")) {
-            return new DesignerProfile();
-        }
-        return null;
-    }
-}
-```
+* Verification of consistency between class diagrams and specified requirements[cite: 125].
+* Verification between class diagrams and the developed software[cite: 126].
+* **Developer Testing**: Functionality and robustness testing by the developer, including abnormal situations like the absence of a pre-existing database[cite: 128, 129, 130].
+* **Peer-Review Testing**: Executable software was sent to colleagues for verification, leading to the identification and resolution of further issues, primarily related to input validation[cite: 133].
 
-### 3. Observer Pattern
+## Getting Started
 
-The Observer pattern is used to update the UI components when the underlying data changes, ensuring that the view reflects the latest model state.
-
-```java
-public class TalentModel {
-    private List<Observer> observers = new ArrayList<>();
-
-    public void addObserver(Observer observer) {
-        observers.add(observer);
-    }
-
-    public void removeObserver(Observer observer) {
-        observers.remove(observer);
-    }
-
-    public void notifyObservers() {
-        for (Observer observer : observers) {
-            observer.update();
-        }
-    }
-
-    // other methods to modify talent data
-}
-```
-
-### 4. MVC Controllers
-
-Controllers handle user input and update the model and view accordingly. For instance, the `ProfileController` manages the interactions related to talent profiles.
-
-```java
-public class ProfileController {
-    private TalentModel model;
-    private TalentView view;
-
-    public ProfileController(TalentModel model, TalentView view) {
-        this.model = model;
-        this.view = view;
-    }
-
-    public void addProfile(String name, String type) {
-        TalentProfile profile = new TalentProfileFactory().createProfile(type);
-        model.addProfile(profile);
-        view.updateView();
-    }
-
-    // other methods to handle user actions
-}
-```
-
-## Running the Application
-
-1. Clone the repository:
-
-   ```bash
-   git clone https://github.com/Shalafi01/javafx-TalentView.git
-   ```
-
-2. Navigate to the project directory:
-
-   ```bash
-   cd javafx-TalentView
-   ```
-
-3. Compile and run the application:
-
-   ```bash
-   javac -d bin src/*.java
-   java -cp bin Main
-   ```
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-```
+To run the project, you will need JavaFX. Further instructions on setting up and running the application can be found in the project documentation.
