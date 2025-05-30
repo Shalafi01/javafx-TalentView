@@ -25,6 +25,8 @@ The application provides the following key functionalities:
 
 * **Work/Contact Management**: Add or delete work experiences and emergency contacts for selected workers.
 
+![Contacts App Screenshot](img/screenshot_2.png)
+
 ## Java and JavaFX Concepts and Features
 - String manipulation
 - Input validation with regular expressions (`Pattern`/`Matcher`)
@@ -113,6 +115,11 @@ The following validation activities were performed:
 
 * **Peer-Review Testing**: Executable software was sent to colleagues for verification, leading to the identification and resolution of further issues, primarily related to input validation.
 
-## Getting Started
+## Screenshots
 
-To run the project, you will need JavaFX. Further instructions on setting up and running the application can be found in the project documentation.
+![Contacts App Screenshot](img/screenshot.png)
+
+![Contacts App Screenshot](img/screenshot_3.png)
+
+![Contacts App Screenshot](img/screenshot_4.png)
+
