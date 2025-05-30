@@ -25,6 +25,30 @@ The application provides the following key functionalities:
 
 * **Work/Contact Management**: Add or delete work experiences and emergency contacts for selected workers.
 
+## Java and JavaFX Concepts and Features
+- String manipulation
+- Input validation with regular expressions (`Pattern`/`Matcher`)
+- JSON file parsing/import
+- File I/O 
+- Enum types for predefined value sets
+- Date parsing and validation
+- Alert dialogs for user notifications
+- Static UI via FXML
+- Dynamic UI elements (runtime component creation)
+- Responsive layout (auto-resizing and adapting to window shape)
+- Event handling with lambda expressions 
+- JavaFX collections 
+- Duplicate-elimination logic (`Set`, `SortedSet`, `TreeSet` usage)
+- Stream API (filtering, mapping, collecting)
+- Inheritance (class hierarchies for shared behavior)
+- Use of interfaces
+- Custom exceptions for validation errors
+- Exception handling (try/catch/finally)
+- Advanced search functionality (complex filtering criteria)
+- Agnostic data import layer (separation of I/O from business logic)
+- Data Access Object (DAO) pattern
+- Model-View-Controller (MVC) architectural pattern
+
 ## System Architecture
 
 The system is designed following the **Model-View-Controller (MVC)** architectural pattern, separating the application into three distinct packages:
