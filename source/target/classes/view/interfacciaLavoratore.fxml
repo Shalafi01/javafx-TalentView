@@ -1,0 +1,19 @@
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.geometry.Insets?>
+<VBox fx:id="root" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="controller.interfacciaLavoratore">
+    <VBox>
+        <Button text="Indietro" onAction="#torna" style="-fx-background-color: #007FDB; -fx-text-fill: white;"/>
+        <padding>
+            <Insets top="5" left="20" bottom="5"/>
+        </padding>
+    </VBox>
+    <ScrollPane fitToWidth="true" style="-fx-focus-color: transparent; -fx-faint-focus-color: transparent; -fx-background-color:transparent;" vbarPolicy="NEVER">
+        <VBox fx:id="scheda" alignment="CENTER" spacing="5">
+            <padding>
+                <Insets bottom="50"/>
+            </padding>
+        </VBox>
+    </ScrollPane>
+</VBox>

@@ -1,0 +1,397 @@
+{
+	"dipendenti":
+	[
+		{
+			"nome": "Armando",
+			"cognome": "Medici",
+			"email": "armando.medici@mail.com",
+			"telefono": "346-345-1244",
+			"luogoNascita": "verona",
+			"dataNascita": "24/09/1972",
+			"nazionalita": "italiana",
+			"login": "armandoMedici",
+			"password": "1234"
+		},
+		{
+			"nome": "Filippo",
+			"cognome": "Arturi",
+			"email": "filippo.arturi@mail.com",
+			"telefono": "340-345-2344",
+			"luogoNascita": "brescia",
+			"dataNascita": "24/05/1977",
+			"nazionalita": "italiana",
+			"login": "admin",
+			"password": "admin"
+		}
+	],
+	"lavoratori":
+	[
+		{
+			"nome": "Marco",
+			"cognome": "Fogli",
+			"email": "marco.fogli@mail.com",
+			"telefono": "340-345-2344",
+			"luogoNascita": "Brescia",
+			"dataNascita": "25/05/1967",
+			"nazionalita": "Italiana",
+			"indirizzo": "Via Capri 5, Brescia",
+			"patente": "B",
+			"automunito": "Si",
+			"lingueParlate":
+			[
+				"Italiano"
+			],
+			"zoneDisponibilita":
+			[
+				"Brescia"
+			],
+			"periodiDisponibilita":
+			[
+				"04/06/2022",
+				"04/08/2022"
+			],
+			"contattiICE":
+			[
+				{
+					"nome": "Carlo",
+					"cognome": "Simoni",
+					"email": "carlosimoni@mail.com",
+					"telefono": "450-345-2144"
+				},
+				{
+					"nome": "Pippo",
+					"cognome": "Baudo",
+					"email": "pippobaudo@mail.com",
+					"telefono": "450-345-2144"
+				}
+			],
+			"lavori":
+			[
+				{
+					"nomeAzienda": "Life Service",
+					"luogo": "Via Caprera 28A, Brescia",
+					"retribuzione": "40.5",
+					"periodo":
+					[
+						"23/04/2019",
+						"23/05/2022"
+					],
+					"mansioni":
+					[
+						"Bagnino",
+						"Istruttore di nuoto"
+					]
+				},
+				{
+					"nomeAzienda": "T-SERVICE",
+					"luogo": "Via Firenze 2, Brescia",
+					"retribuzione": "60.5",
+					"periodo":
+					[
+						"23/04/2018",
+						"23/06/2018"
+					],
+					"mansioni":
+					[
+						"Commesso"
+					]
+				}
+			]
+		},
+		{
+			"nome": "Nicola",
+			"cognome": "Tomasoni",
+			"email": "t.nicola@mail.com",
+			"telefono": "234 234 1245",
+			"luogoNascita": "Brescia",
+			"dataNascita": "25/05/2001",
+			"nazionalita": "Italiana",
+			"indirizzo": "Via Chiusure 92, Brescia",
+			"patente": "B",
+			"automunito": "No",
+			"lingueParlate":
+			[
+				"Italiano",
+				"Inglese"
+			],
+			"zoneDisponibilita":
+			[
+				"Brescia",
+				"Verona"
+			],
+			"periodiDisponibilita":
+			[
+				"04/06/2022",
+				"04/10/2022",
+				"08/10/2022",
+				"05/02/2023"
+			],
+			"contattiICE":
+			[
+				{
+					"nome": "Pippo",
+					"cognome": "Baudo",
+					"email": "pippobaudo@mail.com",
+					"telefono": "450-345-2144"
+				},
+				{
+					"nome": "Laura",
+					"cognome": "Salenti",
+					"email": "laurasalenti@mail.com",
+					"telefono": "450-345-2144"
+				}
+			],
+			"lavori":
+			[
+				{
+					"nomeAzienda": "IService",
+					"luogo": "Via Milano 4, Brescia",
+					"retribuzione": "38",
+					"periodo":
+					[
+						"23/04/2017",
+						"23/06/2018"
+					],
+					"mansioni":
+					[
+						"Tecnico informatico"
+					]
+				}
+			]
+		},
+		{
+			"nome": "Pietro",
+			"cognome": "Figli",
+			"email": "pietro.figli@mail.com",
+			"telefono": "370-345-2344",
+			"luogoNascita": "Torino",
+			"dataNascita": "25/05/1957",
+			"nazionalita": "Austriaca",
+			"indirizzo": "Via Montessori 5, Bologna",
+			"patente": "A",
+			"automunito": "No",
+			"lingueParlate":
+			[
+				"Italiano",
+				"Tedesco"
+			],
+			"zoneDisponibilita":
+			[
+				"Brescia",
+				"Torino",
+				"Trieste"
+			],
+			"periodiDisponibilita":
+			[
+				"04/06/2022",
+				"04/08/2022"
+			],
+			"contattiICE":
+			[				
+				{
+					"nome": "Marco",
+					"cognome": "Figli",
+					"email": "marcofigli@mail.com",
+					"telefono": "450-345-2144"
+				}
+			],
+			"lavori":
+			[
+				{
+					"nomeAzienda": "Poltrone&Poltrone",
+					"luogo": "Via Leopardi 7, Verona",
+					"retribuzione": "55.48",
+					"periodo":
+					[
+						"23/04/2018",
+						"23/06/2021"
+					],
+					"mansioni":
+					[
+						"Artigiano"
+					]
+				}
+			]
+		},
+		{
+			"nome": "Mirko",
+			"cognome": "Massimo",
+			"email": "mircomassimo@mail.com",
+			"telefono": "340-345-2344",
+			"luogoNascita": "Brescia",
+			"dataNascita": "25/05/1987",
+			"nazionalita": "Italiana",
+			"indirizzo": "Via Salvi 5, Brescia",
+			"patente": "No",
+			"automunito": "No",
+			"lingueParlate":
+			[
+				"Italiano",
+				"Inglese",
+				"Francese"
+			],
+			"zoneDisponibilita":
+			[
+				"Brescia",
+				"Verona"
+			],
+			"periodiDisponibilita":
+			[
+				"04/06/2022",
+				"04/08/2022",
+				"05/10/2022",
+				"05/11/2022"
+			],
+			"contattiICE":
+			[
+				{
+					"nome": "Pippo",
+					"cognome": "Baudo",
+					"email": "pippobaudo@mail.com",
+					"telefono": "450-345-2144"
+				}
+			],
+			"lavori":
+			[
+				{
+					"nomeAzienda": "Life Service",
+					"luogo": "Via Caprera, 28A",
+					"retribuzione": "214.23",
+					"periodo":
+					[
+						"23/04/2022",
+						"23/05/2022"
+					],
+					"mansioni":
+					[
+						"Bagnino",
+						"Istruttore di nuoto"
+					]
+				}
+			]
+		},
+		{
+			"nome": "Giacomo",
+			"cognome": "Lombardi",
+			"email": "giacomol67@mail.com",
+			"telefono": "340-345-2344",
+			"luogoNascita": "Brescia",
+			"dataNascita": "25/05/1967",
+			"nazionalita": "Francese",
+			"indirizzo": "Via Angeli 5, Brescia",
+			"patente": "B1",
+			"automunito": "Si",
+			"lingueParlate":
+			[
+				"Italiano",
+				"Inglese"
+			],
+			"zoneDisponibilita":
+			[
+				"Brescia",
+				"Verona"
+			],
+			"periodiDisponibilita":
+			[
+				"04/06/2022",
+				"04/08/2022",
+				"05/10/2024",
+				"09/11/2024"
+			],
+			"contattiICE":
+			[
+				{
+					"nome": "Marco",
+					"cognome": "Rossi",
+					"email": "marcorossi@mail.com",
+					"telefono": "+39 450 3456664"
+				}
+			],
+			"lavori":
+			[
+				{
+					"nomeAzienda": "Poltrone&Poltrone",
+					"luogo": "Via Leopardi 7, Verona",
+					"retribuzione": "55.48",
+					"periodo":
+					[
+						"23/04/2018",
+						"23/06/2021"
+					],
+					"mansioni":
+					[
+						"Artigiano"
+					]
+				},
+				{
+					"nomeAzienda": "Ghidini Trasporti",
+					"luogo": "Via Milano 145, Bologna",
+					"retribuzione": "60",
+					"periodo":
+					[
+						"23/04/2018",
+						"23/06/2019"
+					],
+					"mansioni":
+					[
+						"Camionista"
+					]
+				}
+			]
+		},		
+		{
+			"nome": "Giuseppe",
+			"cognome": "Mingardi",
+			"email": "giuseppeMin@mail.com",
+			"telefono": "340-005-2344",
+			"luogoNascita": "Verona",
+			"dataNascita": "25/05/1977",
+			"nazionalita": "Italiana",
+			"indirizzo": "Via Veneto 191, Verona",
+			"patente": "No",
+			"automunito": "No",
+			"lingueParlate":
+			[
+				"Italiano"
+			],
+			"zoneDisponibilita":
+			[
+				"Verona"
+			],
+			"periodiDisponibilita":
+			[
+				"04/06/2022",
+				"04/08/2022",
+				"05/10/2022",
+				"05/11/2022"
+			],
+			"contattiICE":
+			[
+				{
+					"nome": "Pippo",
+					"cognome": "Baudo",
+					"email": "pippobaudo@mail.com",
+					"telefono": "450-345-2144"
+				}
+			],
+			"lavori":
+			[				
+				{
+					"nomeAzienda": "Mingardi Bike",
+					"luogo": "Via Dante Alighieri 45, Verona",
+					"retribuzione": "140.2",
+					"periodo":
+					[
+						"23/04/2017",
+						"23/06/2020"
+					],
+					"mansioni":
+					[
+						"Proprietario",
+						"Commesso"
+					]
+				}
+			]
+		}
+	]
+}

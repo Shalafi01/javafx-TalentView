@@ -1,0 +1,15 @@
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox fx:id="root" alignment="CENTER" prefWidth="660" prefHeight="680" spacing="35" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="controller.autenticazione">
+    <GridPane alignment="CENTER" vgap="20" hgap="5">
+        <Label text="ID:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+        <TextField fx:id="login" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+        <Label text="Password:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+        <PasswordField fx:id="password" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+    </GridPane>
+    <Button text="Login" onAction="#login" style="-fx-background-color: #007FDB; -fx-text-fill: white;"/>
+    <Label fx:id="err" style="-fx-text-fill: red;"/>
+</VBox>
+
+

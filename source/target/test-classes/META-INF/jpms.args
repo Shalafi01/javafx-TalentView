@@ -1,0 +1,4 @@
+--patch-module
+esercizio.vr457792=_
+--add-reads
+esercizio.vr457792=ALL-UNNAMED

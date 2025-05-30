@@ -1,0 +1,13 @@
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.geometry.Insets?>
+<VBox fx:id="root" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="controller.nuoviDati">
+    <ScrollPane fitToWidth="true" fitToHeight="true" style="-fx-focus-color: transparent; -fx-faint-focus-color: transparent; -fx-background-color:transparent;" vbarPolicy="NEVER">
+        <VBox fx:id="elenco" alignment="CENTER" spacing="15">
+            <padding>
+                <Insets bottom="50" top="20"/>
+            </padding>
+        </VBox>
+    </ScrollPane>
+</VBox>
