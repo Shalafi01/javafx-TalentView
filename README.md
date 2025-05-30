@@ -2,15 +2,6 @@
 
 This project implements a system for managing and searching seasonal workers, built with JavaFX.
 
-## Table of Contents
-
-* [Features](#features)
-* [System Architecture](#system-architecture)
-* [Development Process](#development-process)
-* [Input Validation](#input-validation)
-* [Testing](#testing)
-* [Getting Started](#getting-started)
-
 ## Features
 
 The application provides the following key functionalities:
