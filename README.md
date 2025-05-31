@@ -1,9 +1,17 @@
 # Seasonal Worker Management System
-
 This project implements a system for managing and searching seasonal workers, built with JavaFX.
 
-## Features
+# Table of Contents
+- [Seasonal Worker Management System](#seasonal-worker-management-system)
+- [Features](#features)
+- [Java and JavaFX Concepts and Features](#java-and-javafx-concepts-and-features)
+- [System Architecture](#system-architecture)
+- [Development Process](#development-process)
+- [Input Validation](#input-validation)
+- [Testing](#testing)
+- [Screenshots](#screenshots)
 
+## Features
 The application provides the following key functionalities:
 
 * **Worker Search**: Perform complex searches for seasonal workers based on user-defined parameters such as name, surname, spoken languages, availability periods, roles performed, place of residence, and driving license/car availability. Users can choose between AND or OR search logic.
@@ -16,7 +24,7 @@ The application provides the following key functionalities:
 
 * **Work/Contact Management**: Add or delete work experiences and emergency contacts for selected workers.
 
-<img src="img/screenshot_2.jpg" alt="Contacts App Screenshot" style="width: 500px;"/>
+<img src="img/screenshot_2.png" alt="Contacts App Screenshot" style="width: 500px;"/>
 
 ## Java and JavaFX Concepts and Features
 - String manipulation
@@ -43,7 +51,6 @@ The application provides the following key functionalities:
 - Model-View-Controller (MVC) architectural pattern
 
 ## System Architecture
-
 The system is designed following the **Model-View-Controller (MVC)** architectural pattern, separating the application into three distinct packages:
 
 * **Model**: Manages all data and business logic. It was developed first to ensure robust data handling before implementing the graphical interface.
@@ -57,7 +64,6 @@ In addition to MVC, the **Data Access Object (DAO)** pattern is implemented with
 The `databaseDAOimpl` class handles data import from an external JSON file (used for testing purposes).
 
 ## Development Process
-
 An agile and incremental development process was used, with an iterative four-phase cycle for each new feature:
 
 1. **Design**: Producing documentation, flowcharts, and criticality lists for new functionalities.
@@ -95,7 +101,6 @@ Comprehensive input validation is implemented to ensure data integrity and user 
 Errors are notified to the user.
 
 ## Testing
-
 The following validation activities were performed:
 
 * Verification of consistency between class diagrams and specified requirements.
